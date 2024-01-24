@@ -1,0 +1,195 @@
+SOLID Principles Java
+In java, SOLID  principles are an object-oriented approach that are applied to software structure design. It is conceptualized by Robert C. Martin (also known as Uncle Bob). These five principles have changed the world of object-oriented programming, and also changed the way of writing software. 
+
+o	S-Single Responsibility Principle.
+o	O-Open-Closed Principle.
+o	L-Liskov Substitution Principle.
+o	I-Interface Segregation Principle.
+o	D-Dependency Inversion Principle.
+Single Responsibility Principle:
+The Single Responsibility Principle(SRP) states that there should never be more then one reason for a class to change. This means that every class, or similar structure, in your code should have only one job to do.
+Open-Closed Principle:
+The Open-Closed Principle (OCP) states that classes should be open for extension but closed for modification. “Open to extension” means that you should design your classes so that new functionality can be added as new requirements are generated. “Closed for modification” means that once you have developed a class you should never modify it, except to correct bugs.
+Liskov Substitution Principle:
+The Liskov Substitution Principle (LSP) applies to inheritance hierarchies, specifying that you should design your classes so that client dependencies can be substituted with subclasses without the client knowing about the change.
+Interface segregation Principle:
+This principle is the first principle that applies to interfaces instead of classes in SOLID and it is similar to the single responsibility principle. It states that “do not force any client to implement interface which is irrelevant to them”. Hear your main goal is to focus on avoiding fat interface give preference to many small client-specific interface rather than one general interface and each interface should have a specific responsibility.
+Dependency Inversion Principle:
+The principle states that we must use abstraction (abstract classes and interfaces) instead of concrete implementations. High-level modules should not depend on the low-level module but both should depend on the abstraction. Because the abstraction does not depend on detail but the detail depends on the abstraction. 
+
+OOPs (Object-Oriented Programming System)
+
+o	Object
+o	Class
+o	Inheritance
+o	Polymorphism
+o	Abstraction
+o	Encapsulation
+These concepts, there are some other terms which are used in Object-Oriented design:
+o	Coupling
+o	Cohesion
+o	Association
+o	Aggregation
+o	Composition
+
+Object:
+Any entity that has state and behavior is known as an object.
+Example:chair, pen, table, keyboard, bike.
+
+Class:
+A class can also be defined as a blueprint from which you can create an individual object. Class doesn’t consume any space.
+
+Inheritance:
+When one object acquires all the properties and behaviours of a parent object, it is known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.
+
+Polymorphism:
+If one task is performed in different ways, it is known as polymorphism.
+Ex: to convince the customer differently, to draw something, for ex: shape, triangle, rectangle, etc.
+In java, we use method overloading and method overriding to achieve polymorphism.
+Ex: can be speck something; for example, a cat speaks meow, dog barks woof.
+
+Abstraction:
+Hiding internal details and showing functionality is known as abstraction. For example phone call, we don’t the internal processing.
+
+Encapsulation:
+Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a capsule, it is wrapped with different medicines.
+A java class is the example of encapsulation. Java bean is the fully encapsulation class because all the data members are private.
+
+Coupling:
+Coupling refers to the knowledge or information or dependency of another class. It arises when classes are aware of each other. If a class has the details information of another class, there is strong coupling. In java, we use private, protected, and public modifiers to display the visibility level of a class, method, and field. You can interfaces for the weaker coupling because there is no concreate implementation.
+
+Cohesion:
+Cohesion refers to the level of a component which performs a single well-defined task. A single well-defined task is done by a highly cohesive method. The weakly cohesive method will split the task into separate parts. The java.io package is highly cohesive package because it has I/O related classes and interface. However, the java.util  package is a weakly cohesive package because it has unrelated classes and interfaces. 
+
+Association:
+Association represents the relationship between the objects. One object can be associated with one object or many objects. There can be four types of association between the objects:
+	One to One
+	One to Many
+	Many to One
+	Many to Many
+Lets understand the relationship with real-time examples. For example, One country can have one prime minister (one to one).
+Prime minister can have many ministers (one to many).
+Also, many MP’s can have one prime minister (many to one).
+Many ministers can have many departments (many to many).
+
+Aggregation:
+Aggregation is a way to achieve Association. Aggregation represents the relationship where one object contains other object as a part of its state. It represents the weak relationship between objects.it is also termed as a has-a relationship in java. Like , inheritance represents the is-a relationship. It is another way to reuse objects.
+
+Composition:
+The composition is also a way to achieve Association. The composition represents the relationship where one object contains other objects as a part of its state. There is strong relationship between the containing object and the dependent object. It is the state where containing objects do not have an independent existence. If you delete the parent, all the child objects will be deleted automatically.
+
+High Availability:
+high availability is a technique to avoid the interrupts like (s/w & h/w failures), process failures, minimize downtime and provide services even in interrupts.
+some of the key concepts to achieve high availability are:
+1)Redundancy:  redundancy means if any component fail duplicate severs, db , or components will take the action to process the request.
+2)Clustering: grouping set of processes to work together to build scalable and reliable s/y's 
+3)Failover: failover is a mechanism it is used to automatically divert the failure to backup s/y or components. If one severs fail load balancer may divert the traffic to backup s/y's or components to continue service.
+4)Distributed S/y’s: high availability can be achieved by designing distributed s/y’s, different components of application run on separate servers. If one server fail other will continue to handle the req. 
+5)Load balancing: distributing incoming reqs to multiple servers to reduce the load on single server. Load balancing can be implemented at various levels like DNS- load balancing(is a type of load balancing that uses the DNS to distribute the traffic across several servers) or load balancing devices(Azure application gateway , AWS Elastic load balancing). 
+6)Monitoring and Health checks: monitoring and health checks helps to detect the issues early. s/y's are designed to react automatically to  identified problems, failover.
+
+
+Auto-Scaling:
+Automatically adjusting the capacity of application, auto scaling achieves that application can handle the load at peak hours.by using auto-scaling, application will be able to respond fast to req, reduce the latency.
+Automatically adjusting resources based on usage it helps to reduce the cost.
+Auto-scaling commonly used in cloud computing platforms such as AWS, AZURE, Google cloud.
+It is an important feature for building scalable and resilient application.
+
+Tools:
+•	Amazon Ec2 auto scaling
+•	Google Cloud Auto Ml
+•	Azure auto scale
+Resilience:
+A resilient technology s/y can quickly adapt changes, recover from failure continue to provide services   even when unexpected events occur.
+Redundancy: if a s/y fail backups are used to process the req.
+Backup: If data loss or s/y fail, organizations can quickly restore their data through back up. 
+
+Load balancing: distributing incoming reqs to multiple servers to reduce the load on single server. Load balancing can be implemented at various levels like DNS- load balancing (is a type of load balancing that uses the DNS to distribute the traffic across several servers) or load balancing devices (Azure application gateway, AWS Elastic load balance.
+Tools:
+•	Apache JMeter
+•	Pioneer
+•	Pumba
+
+                          Observability 
+Observability is understanding, monitoring, analyse the internal behaviour of the s/y.
+Observability provides information what is happening within a s/y, it helps the developer to identify the issues resolves issues.
+Observability mainly focus on four factors:
+•	Logging
+•	Monitoring
+•	Tracing
+•	metrics
+
+Benefits of Observability:
+Discover and address unknown issues: Observability discovers conditions you might never know or think to look 
+Catch and resolves issues early: Developer teams can identify and fix issues in new code before they impact the customer experience
+Scale observability automatically: the ability of a system to dynamically adapt and expand its observability capabilities in response to changes in workload, complexity, or other environmental factors.
+Tools:
+•	Splunk
+•	Grafana
+•	Dynatrace
+•	App dynamics
+                             Monitoring
+Processes needed to track, review, regulate the progress, performance of the application.
+Some other examples of performance monitoring are:
+•	Monitoring CPU of server
+•	Tracking and monitoring error rate
+•	Monitoring n/w traffic
+Tools:
+•	Graylags
+•	Splunk
+•	New Relic
+•	Datadog
+                             Logging
+
+•	Logging means recording events, activities, and information about the execution of a application. 
+•	Logs are typically generated during the runtime of the application and serve as a valuable tool for developers, system administrators, and support teams to understand and troubleshoot the application's behaviour. 
+•	Logging is an essential aspect of observability and is used for various purposes, including debugging, performance monitoring, error tracking, and auditing.
+Tools:
+•	Log4j
+•	Log back
+•	Java.util. logging
+                                Alerts
+•	Alerts are notifications or messages by predefined conditions or events within the application. 
+•	The purpose of alerts is to notify developers about issues, anomalies, or situations that require attention.
+•	Alerts play a crucial role in maintaining the reliability, performance, and security of applications. 
+Types of Alerts:
+•	Error Alerts
+•	Performance Alerts
+•	Availability Alerts
+•	Security Alerts
+Tools:
+•	Alert manager
+•	PagerDuty
+•	Grafana
+•	Datadog
+                        RTO(Recovery Time Objective)
+The   recovery time objective (RTO)is the amount of time or real time during or after a disaster that can elapse without a business restoring its services and processes to acceptable levels before it will experience intolerable consequences associated with the disruption.
+                                   The OSI Reference Model
+
+The OSI model has seven layers.
+The Physical Layer: The physical layer is concerned with transmitting raw bits over a communication channel.
+•	The design issues have to do with making sure that when one side sends a 1 bit, it is received by the other side as a 1 bit, not as a 0 bit.
+The Data Link Layer: The main task of the data link layer is to transform a raw transmission facility into a line that appears free of undetected transmission errors to the network layer.
+•	It accomplishes this task by having the sender break up the input data into data frames and transmits the frames sequentially
+The Network Layer: The network layer controls the operation of the subnet. A key design issue is determining how packets are routed from source to destination. 
+•	Routes can be based on static tables that are ''wired into'' the network and rarely changed.
+transport layer:
+The transport layer also determines what type of service to provide to the session layer, and, ultimately, to the users of the network. The most popular type of transport connection is an error-free point-to-point channel that delivers messages or bytes in the order in which they were sent.
+The Session Layer:  
+The session layer allows users on different machines to establish sessions between them. 
+Sessions offer various services, including dialog control token management and synchronization.
+
+The Presentation Layer:  
+The presentation layer is concerned with the syntax and semantics of the information transmitted.
+The presentation layer manages these abstract data structures 
+and allows higher-level data structures
+
+The Application Layer:  
+The application layer contains a variety of protocols that are commonly needed by users. 
+
+
+One widely-used application protocol is HTTP (Hypertext Transfer Protocol), which is the basis forth World Wide Web.
+
+                              Recovery point objective (RPO)
+
+Recovery point objective (RPO) is defined as the maximum amount of data – as measured by time – that can be lost after a recovery from a disaster, failure, or comparable event before data loss will exceed what is acceptable to an organization.
